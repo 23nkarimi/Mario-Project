@@ -1,0 +1,35 @@
+# Mario Grid World Simulation
+
+## 🕹️ Overview
+This C++ program simulates a simplified Mario game, where Mario navigates through a multi-level 2D grid world. Each level contains elements such as coins, mushrooms, enemies (Goombas, Koopa Troopas), a boss, and a warp pipe. Mario moves randomly through each level, interacting with elements and engaging in combat to progress through the game and ultimately save the princess.
+
+## 🎮 Game Mechanics
+- **Levels**: The game consists of `L` levels, each with an `N x N` grid.
+- **Starting State**: Mario starts with `V` lives and the lowest power level.
+- **Elements**: Each grid is populated with:
+  - Coins
+  - Mushrooms (power-ups)
+  - Goombas & Koopa Troopas (enemies)
+  - Boss (required to beat unless warp pipe is found)
+  - Warp Pipe (skips boss)
+- **Power Levels**: Mario has 3 power levels. Power increases with mushrooms and wins, decreases with losses.
+- **Combat**: Mario has a chance to win or lose against enemies and bosses based on predefined probabilities. If he loses at his lowest power level, he loses a life.
+- **Victory Conditions**: Mario wins if he defeats the final boss and saves the princess.
+- **Defeat Conditions**: Mario loses if he runs out of lives.
+
+## 📝 Output
+All of Mario’s actions—movements, interactions, power level changes, combat outcomes, and game results—are logged in a text file.
+
+## 📌 Constraints
+- Only **primitive data structures** (arrays, etc.) are used—no vectors, lists, or STL containers.
+- The code adheres strictly to **C++ standards**.
+
+## 📂 Files
+- `main.cpp`: Core logic of the simulation
+- `log.txt`: Logs of all game actions and outcomes
+- `README.md`: Description of the project
+
+## ⚙️ How to Run
+1. Compile the code:
+   ```bash
+   g++ main.cpp -o mario_simulation
